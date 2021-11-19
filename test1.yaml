@@ -1,0 +1,26 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  annotations:
+    alb.ingress.kubernetes.io/group.name: madstack
+    alb.ingress.kubernetes.io/healthcheck-path: /ping/
+    alb.ingress.kubernetes.io/scheme: internal
+    alb.ingress.kubernetes.io/success-codes: "200"
+    kubernetes.io/ingress.class: alb
+  finalizers:
+  - group.ingress.k8s.aws/madstack
+  generation: 1
+  labels:
+    app: nginx
+  name: nginx
+  namespace: demo-buddy-feature-buddy
+spec:
+  rules:
+  - host: nginx.dev.madstack.com
+    http:
+      paths:
+      - backend:
+          serviceName: nginx
+          servicePort: 80
+        path: /*
+        pathType: Prefix
