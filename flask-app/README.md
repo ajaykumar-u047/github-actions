@@ -1,8 +1,6 @@
 Calculator
 ------------
 
-[![Build Status](https://travis-ci.org/rajatguptarg/calc.svg?branch=master)](https://travis-ci.org/rajatguptarg/calc)
-
 This is minimal flask application of Calculator which performs following Operations:
 
 [1] Addition (OPERATION: +)
