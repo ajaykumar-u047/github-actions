@@ -35,3 +35,5 @@ Go to terminal and inside the project directory, and type the following command:
     $ python calc.py
 
 The server is started and now goto your browser and open URL localhost:5000.
+
+Once the server is up, Add /calc to goto calculator page
