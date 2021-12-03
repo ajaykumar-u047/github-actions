@@ -3,7 +3,7 @@ name: Build a Docker image and Push it to ACR
 on:
   push:
     branches:
-    - dev 
+    - test-ci 
 
 jobs:
   build_and_push_docker:
@@ -45,7 +45,9 @@ jobs:
         with:
           role-skip-session-tagging: true
           role-to-assume: arn:aws:iam::925305708877:role/msd-msd-eks-role
+          role-duration-seconds: 7200
           aws-region: us-east-1
+          role-session-name: MySessionName
 
       - name: Deploy to Kubernetes cluster                                          
         uses: kodermax/kubectl-aws-eks@master
