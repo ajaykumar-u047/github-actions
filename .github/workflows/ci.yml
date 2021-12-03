@@ -45,7 +45,7 @@ jobs:
         with:
           role-skip-session-tagging: true
           role-to-assume: arn:aws:iam::925305708877:role/msd-msd-eks-role
-          role-duration-seconds: 7200
+          role-duration-seconds: 3600
           aws-region: us-east-1
           role-session-name: MySessionName
 
