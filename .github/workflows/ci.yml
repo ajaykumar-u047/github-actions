@@ -44,7 +44,7 @@ jobs:
         uses: aws-actions/configure-aws-credentials@v1
         with:
           role-skip-session-tagging: true
-          role-to-assume: arn:aws:iam::925305708877:role/BuddyCI
+          role-to-assume: arn:aws:iam::925305708877:role/github-role
           role-duration-seconds: 3600
           aws-region: us-east-1
           role-session-name: MySession1
